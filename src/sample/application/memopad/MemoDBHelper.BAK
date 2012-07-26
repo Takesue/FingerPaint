@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 /**
-*  DBã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã™ã‚‹
+*  DB‚ğƒI[ƒvƒ“‚·‚é
 */
 public class MemoDBHelper extends SQLiteOpenHelper {
 	
