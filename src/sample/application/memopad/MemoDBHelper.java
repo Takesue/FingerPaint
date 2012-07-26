@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 /**
-*  DBをオープンする // コメント追加
+*  DBをオープンする 
 */
 public class MemoDBHelper extends SQLiteOpenHelper {
 	
