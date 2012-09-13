@@ -1,4 +1,4 @@
-package sample.application.memopad;
+package sample.application.fingerpaint;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,22 +16,23 @@ import android.view.MenuItem;
 
 
 public class MemopadActivity extends Activity {
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        this.setContentView(R.layout.main);
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		this.setContentView(R.layout.main);
 		EditText et = (EditText) this.findViewById(R.id.editText1);
-		SharedPreferences pref = this.getSharedPreferences("MemoPrefs", MODE_PRIVATE);
+		SharedPreferences pref = this.getSharedPreferences("MemoPrefs",
+				MODE_PRIVATE);
 		et.setText(pref.getString("memo", ""));
 		et.setSelection(pref.getInt("cursor", 0));
-		
-    }
+
+	}
 
 	@Override
 	protected void onStop() {
-		super.onStop();		// TODO ‚±‚Ìˆês‚ğ’Ç‰Á‚·‚éB
+		super.onStop();		// TODO ï¿½ï¿½ï¿½Ìˆï¿½sï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½B
 		EditText et = (EditText) this.findViewById(R.id.editText1);
 		SharedPreferences pref = this.getSharedPreferences("MemoPrefs", MODE_PRIVATE);
 		SharedPreferences.Editor editor = pref.edit();
