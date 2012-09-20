@@ -96,13 +96,13 @@ public class MemopadActivity extends Activity {
 		case R.id.menu_save:
 			this.saveMemo();
 			break;
-		case R.id.menu_open:
-			Intent i = new Intent(this, MemoList.class);
-			this.startActivityForResult(i, 0);
-			break;
-		case R.id.menu_new:
-			et.setText("");
-			break;
+//		case R.id.menu_open:
+//			Intent i = new Intent(this, MemoList.class);
+//			this.startActivityForResult(i, 0);
+//			break;
+//		case R.id.menu_new:
+//			et.setText("");
+//			break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
