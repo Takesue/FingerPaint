@@ -112,17 +112,17 @@ public class FilePicker extends ListActivity {
 		};
 	}
 
+	
 	private void makeFileFilter() {
 		this.fFilter = new FileFilter() {
 			public boolean accept(File file) {
 				Pattern p = Pattern.compile(
-						"¥¥.txt$|¥¥.xml$|¥¥.ini$|¥¥.htm$|¥¥.csv$|¥¥.java$", Pattern.CASE_INSENSITIVE);
+						"\\.png$|\\.jpg$|\\.gif$|\\.jpeg$|\\.bmp$", Pattern.CASE_INSENSITIVE);
 				Matcher m = p.matcher(file.getName());
-				boolean shown = (m.find() || file.isDirectory()) &&! file.isHidden();
+				boolean shown = (m.find() || file.isDirectory()) && !file.isHidden();
 				return shown;
 			}
 		};
-
 	}
 	
 	public void upButtonClick(View v) {

@@ -52,7 +52,7 @@ public class FileListAdapter extends ArrayAdapter<Object>{
 		else {
 //			fIcon.setImageResource(R.drawable.ic_launcher);
 			Pattern p = Pattern.compile(
-					"¥¥.png$|¥¥.jpg$|¥¥.gif$|¥¥.bmp$" , Pattern.CASE_INSENSITIVE);
+					"\\.png$|\\.jpg$|\\.gif$|\\.bmp$" , Pattern.CASE_INSENSITIVE);
 			Matcher m = p.matcher(this.fc[position].getName());
 			
 			if (m.find()) {
